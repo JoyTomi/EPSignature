@@ -22,8 +22,6 @@ open class EPSignatureViewController: UIViewController {
     @IBOutlet weak var lblSignatureSubtitle: UILabel!
     @IBOutlet weak var lblDefaultSignature: UILabel!
     @IBOutlet weak var lblDate: UILabel!
-    @IBOutlet weak var viewMargin: UIView!
-    @IBOutlet weak var lblX: UILabel!
     @IBOutlet weak var signatureView: EPSignatureView!
     
     // MARK: - Public Vars
@@ -38,7 +36,7 @@ open class EPSignatureViewController: UIViewController {
     
     override open func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.cancel, target: self, action: #selector(EPSignatureViewController.onTouchCancelButton))
         cancelButton.tintColor = tintColor
         self.navigationItem.leftBarButtonItem = cancelButton
