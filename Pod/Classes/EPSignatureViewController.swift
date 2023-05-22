@@ -17,9 +17,6 @@ import UIKit
 open class EPSignatureViewController: UIViewController {
 
     // MARK: - IBOutlets
-    
-    @IBOutlet weak var switchSaveSignature: UISwitch!
-    @IBOutlet weak var lblDefaultSignature: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var signatureView: EPSignatureView!
     
@@ -28,7 +25,7 @@ open class EPSignatureViewController: UIViewController {
     open var showsDate: Bool = true
     open var showsSaveSignatureOption: Bool = true
     open weak var signatureDelegate: EPSignatureDelegate?
-    open var subtitleText = "Sign Here"
+    open var subtitleText = "123"
     open var tintColor = UIColor.defaultTintColor()
 
     // MARK: - Life cycle methods
@@ -58,14 +55,9 @@ open class EPSignatureViewController: UIViewController {
             let actionButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.action, target:   self, action: #selector(EPSignatureViewController.onTouchActionButton(_:)))
             actionButton.tintColor = tintColor
             self.navigationItem.rightBarButtonItems = [doneButton, clearButton, actionButton]
-            switchSaveSignature.onTintColor = tintColor
         } else {
             self.navigationItem.rightBarButtonItems = [doneButton, clearButton]
-            lblDefaultSignature.isHidden = true
-            switchSaveSignature.isHidden = true
         }
-        
-        switchSaveSignature.setOn(false, animated: true)
     }
     
     override open func didReceiveMemoryWarning() {
@@ -104,11 +96,6 @@ open class EPSignatureViewController: UIViewController {
 
     @objc func onTouchDoneButton() {
         if let signature = signatureView.getSignatureAsImage() {
-            if switchSaveSignature.isOn {
-                let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
-                let filePath = (docPath! as NSString).appendingPathComponent("sig.data")
-                signatureView.saveSignature(filePath)
-            }
             signatureDelegate?.epSignature!(self, didSign: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
             dismiss(animated: true, completion: nil)
         } else {
