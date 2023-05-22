@@ -19,7 +19,6 @@ open class EPSignatureViewController: UIViewController {
     // MARK: - IBOutlets
     
     @IBOutlet weak var switchSaveSignature: UISwitch!
-    @IBOutlet weak var lblSignatureSubtitle: UILabel!
     @IBOutlet weak var lblDefaultSignature: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var signatureView: EPSignatureView!
@@ -66,7 +65,6 @@ open class EPSignatureViewController: UIViewController {
             switchSaveSignature.isHidden = true
         }
         
-        lblSignatureSubtitle.text = subtitleText
         switchSaveSignature.setOn(false, animated: true)
     }
     

@@ -12,7 +12,6 @@
             <connections>
                 <outlet property="lblDate" destination="axD-zL-F02" id="wTq-kl-F6R"/>
                 <outlet property="lblDefaultSignature" destination="aik-5V-tSc" id="I3Z-k5-p5s"/>
-                <outlet property="lblSignatureSubtitle" destination="rdS-ZH-7LX" id="JNs-Ic-dDV"/>
                 <outlet property="signatureView" destination="OAr-kk-HpY" id="4ZM-Go-wnK"/>
                 <outlet property="switchSaveSignature" destination="J7f-zy-tMu" id="KAn-zS-2zW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -37,15 +36,6 @@
                     <color key="textColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sign Here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdS-ZH-7LX">
-                    <rect key="frame" x="20" y="582" width="335" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="4kW-fB-aHl"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.78543893909999996" green="0.1638312089" blue="0.099763569080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 December 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axD-zL-F02">
                     <rect key="frame" x="239" y="20" width="121" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -62,9 +52,6 @@
             <constraints>
                 <constraint firstItem="F5l-mP-b9o" firstAttribute="trailing" secondItem="axD-zL-F02" secondAttribute="trailing" constant="15" id="9Pq-L2-SZk"/>
                 <constraint firstItem="aik-5V-tSc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-1" id="GlS-Yf-S40"/>
-                <constraint firstItem="F5l-mP-b9o" firstAttribute="trailing" secondItem="rdS-ZH-7LX" secondAttribute="trailing" constant="20" id="JOv-bb-Yrx"/>
-                <constraint firstItem="rdS-ZH-7LX" firstAttribute="leading" secondItem="F5l-mP-b9o" secondAttribute="leading" constant="20" id="L7L-MI-kvu"/>
-                <constraint firstItem="aik-5V-tSc" firstAttribute="top" secondItem="rdS-ZH-7LX" secondAttribute="bottom" constant="10" id="MgR-XF-1Bq"/>
                 <constraint firstItem="OAr-kk-HpY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="R89-jA-Ieb"/>
                 <constraint firstAttribute="trailing" secondItem="OAr-kk-HpY" secondAttribute="trailing" id="Wcg-X5-9zF"/>
                 <constraint firstAttribute="bottom" secondItem="OAr-kk-HpY" secondAttribute="bottom" id="WtB-mL-Yei"/>
